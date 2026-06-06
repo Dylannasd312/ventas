@@ -6,7 +6,7 @@
 <main id="main" class="main">
   <div class="pagetitle">
     <h1>Proveedores</h1>
-    
+
   </div><!-- End Page Title -->
   <section class="section">
     <div class="row">
@@ -28,7 +28,7 @@
                   <th class="text-center">Nombre</th>
                   <th class="text-center">Telefono</th>
                   <th class="text-center">Email</th>
-                  <th class="text-center">CP</th>
+                  <th class="text-center">NIT</th>
                   <th class="text-center">Sitio web</th>
                   <th class="text-center">Nota</th>
                   <th class="text-center">

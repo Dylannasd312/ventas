@@ -12,6 +12,7 @@ use App\Http\Controllers\Reportes_productos;
 use App\Http\Controllers\Usuarios;
 use App\Http\Controllers\Ventas;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ClienteController;
 
 //crear un usuario admin, solo usar una vez
 Route::get('/crear-admin', [AuthController::class, 'crearAdmin']);
@@ -56,10 +57,10 @@ Route::prefix('productos')->middleware('auth', 'Checkrol:admin')->group(function
     Route::post('/store', [Productos::class, 'store'])->name('productos.store');
     Route::get('/edit/{id}', [Productos::class, 'edit'])->name('productos.edit');
     Route::put('/update/{id}', [Productos::class, 'update'])->name('productos.update');
-    
+
     Route::get('/show-image/{id}', [Productos::class, 'show_image'])->name('productos.show.image');
     Route::put('/update-image/{id}', [Productos::class, 'update_image'])->name('productos.update.image');
-    
+
     Route::get('/show/{id}', [Productos::class, 'show'])->name('productos.show');
     Route::delete('/destroy/{id}', [Productos::class, 'destroy'])->name('productos.destroy');
     Route::get('/cambiar-estado/{id}/{estado}', [Productos::class, 'estado'])->name('productos.estado');
@@ -100,4 +101,22 @@ Route::prefix('compras')->middleware('auth', 'Checkrol:admin')->group(function()
     Route::put('/update/{id}', [Compras::class, 'update'])->name('compras.update');
     Route::get('/show/{id}', [Compras::class, 'show'])->name('compras.show');
     Route::delete('/destroy/{id}', [Compras::class, 'destroy'])->name('compras.destroy');
+});
+
+Route::prefix('clientes')->middleware('auth')->group(function(){
+
+    Route::get('/', [Clientes::class, 'index'])->name('clientes');
+
+    Route::get('/create', [Clientes::class, 'create'])->name('clientes.create');
+
+    Route::post('/store', [Clientes::class, 'store'])->name('clientes.store');
+
+    Route::get('/edit/{id}', [Clientes::class, 'edit'])->name('clientes.edit');
+
+    Route::put('/update/{id}', [Clientes::class, 'update'])->name('clientes.update');
+
+    Route::get('/show/{id}', [Clientes::class, 'show'])->name('clientes.show');
+
+    Route::delete('/destroy/{id}', [Clientes::class, 'destroy'])->name('clientes.destroy');
+
 });

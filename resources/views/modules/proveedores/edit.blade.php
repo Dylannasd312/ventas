@@ -6,7 +6,7 @@
 <main id="main" class="main">
   <div class="pagetitle">
     <h1>Editar proveedor</h1>
-    
+
   </div><!-- End Page Title -->
   <section class="section">
     <div class="row">
@@ -14,7 +14,7 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Editar Proveedor</h5>
-            
+
             <form action="{{ route("proveedores.update", $item->id) }}" method="POST">
                 @csrf
                 @method("PUT")
@@ -24,7 +24,7 @@
                 <input type="text" class="form-control" required name="telefono" id="telefono" value="{{ $item->telefono }}">
                 <label for="email">Email</label>
                 <input type="email" class="form-control" required name="email" id="email" value="{{ $item->email }}">
-                <label for="cp">CP</label>
+                <label for="cp">NIT</label>
                 <input type="text" class="form-control" required name="cp" id="cp" value="{{ $item->cp }}">
                 <label for="sitio_web">Sitio Web</label>
                 <input type="text" class="form-control" required name="sitio_web" id="sitio_web" value="{{ $item->sitio_web }}">

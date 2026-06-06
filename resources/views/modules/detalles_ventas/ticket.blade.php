@@ -55,7 +55,7 @@
 </head>
 <body>
     <div class="ticket">
-        <div class="titulo">Ticket de compra - Facultad Autodidacta</div>
+        <div class="titulo">Ticket de compra</div>
 
         <p><strong>Cajero:</strong> {{ $venta->nombre_usuario }}</p>
         <p><strong>Fecha:</strong> {{ $venta->created_at }}</p>

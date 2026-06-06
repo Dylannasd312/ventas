@@ -25,11 +25,11 @@
               <i class="bi bi-circle"></i><span>Consultar Ventas</span>
             </a>
           </li>
-          
+
         </ul>
       </li><!-- End Components Nav -->
       @endcan
-      
+
       @can('ver-admin')
       <!-- End Contact Page Nav -->
 
@@ -55,7 +55,7 @@
               <i class="bi bi-circle"></i><span>Reportes de productos</span>
             </a>
           </li>
-          
+
         </ul>
       </li>
 
@@ -72,7 +72,12 @@
           <span>Proveedores</span>
         </a>
       </li><!-- End Error 404 Page Nav -->
-
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{{ route('clientes') }}">
+            <i class="fa-solid fa-users"></i>
+            <span>Clientes</span>
+        </a>
+        </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="{{ route("usuarios") }}">
           <i class="fa-solid fa-users"></i>
